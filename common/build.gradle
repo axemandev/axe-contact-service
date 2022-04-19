@@ -1,7 +1,19 @@
 plugins {
     id 'com.axemandev.service.contact.java-library-conventions'
+    id 'groovy-gradle-plugin'
 }
+
+repositories {
+    gradlePluginPortal()
+    mavenCentral()
+}
+
 
 dependencies {
     api project(':client-api')
+
+    compileOnly 'org.projectlombok:lombok:1.18.22'
+    annotationProcessor 'org.projectlombok:lombok:1.18.22'
+    implementation 'org.apache.poi:poi:5.2.2'
+    implementation 'org.apache.poi:poi-ooxml:5.2.2'
 }
